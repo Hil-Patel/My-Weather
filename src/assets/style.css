@@ -2,8 +2,12 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 1rem 3rem;
-    background-color: antiquewhite;
+    background-color: rgb(156, 156, 156);
     border-bottom:1px solid rgb(143, 143, 143) ;
+}
+.active>button{
+    background-color: white;
+    color: black;
 }
 .title{
     display: flex;

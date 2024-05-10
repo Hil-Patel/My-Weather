@@ -4,10 +4,10 @@ import SignUpForm from '../components/SignUpForm';
 import "../assets/style.css"
 
 const SignUp = () => {
-    const loggedIn=false;
+    const logged=false;
   return (
     <>
-      <Navbar loggedIn={loggedIn}/>
+      <Navbar loggedIn={logged}/>
       <SignUpForm/>
     </>
   )
