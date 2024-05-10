@@ -38,7 +38,7 @@ nav{
     justify-content: center;
     align-items: center;
 }
-form{
+.log-form{
     box-shadow: 1px 1px 20px rgb(87, 87, 87);
     border-radius: 30px;
     width: 40%;

@@ -31,7 +31,7 @@ export default function LogInForm(props) {
   return (
     <>
       <div className="login-form">
-        <form className=" mx-auto" onSubmit={formik.handleSubmit}>
+        <form className="log-form mx-auto" onSubmit={formik.handleSubmit}>
           <div className="mb-5">
             <label
               htmlFor="email"
