@@ -1,0 +1,49 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: antiquewhite;
+    border-bottom:1px solid rgb(143, 143, 143) ;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.title>img{
+    width: 50px;
+}
+.title>h1{
+    font-size: 25px;
+}
+.butn{
+    display: flex;
+    gap: 2rem;
+}
+.default{
+    background-color: white;
+    width: 7rem;
+    height: 2rem;
+    padding: 1rem;
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 20px;
+}
+.login-form{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    box-shadow: 1px 1px 20px rgb(87, 87, 87);
+    border-radius: 30px;
+    width: 40%;
+    padding: 3rem 6rem;
+}
+.Sign-Up{
+    color: rgb(36, 36, 255);
+}
+.error{
+    color: red;
+    font-size: small;
+}
