@@ -51,3 +51,30 @@ nav{
     color: red;
     font-size: small;
 }
+.Clear{
+    background-color: rgb(236, 236, 191);
+}
+.Clouds{
+    background-color: rgb(109, 185, 255);
+}
+.Haze{
+    background-color: antiquewhite;
+}
+.Mist{
+    background-color: rgb(242, 167, 245);
+}
+.Rain{
+    background-color: rgb(159, 179, 189);
+}
+.Smoke{
+    background-color: rgb(201, 177, 177);
+}
+.Snow{
+    background-color: whitesmoke;
+}
+.Thunderstorm{
+    background-color: rgb(61, 61, 61);
+}
+.Thunderstorm>div{
+    color: rgb(190, 190, 190);
+}

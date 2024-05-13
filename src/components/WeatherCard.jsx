@@ -1,9 +1,29 @@
-import React from "react";
+import React,{ useState } from "react";
 import Citydetail from "./Citydetail";
+import {  useFormik } from "formik";
+import axios from "axios";
+
+
+
 const WeatherCard = () => {
+    const [detail,setDetail]=useState({})
+    const formik= useFormik({
+        initialValues:{
+            city:""
+        },
+        onSubmit:(value)=>{
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${value.city}&appid=3e88d454b047d4858e789298a0c3ca21`)
+            .then((res)=>{
+                setDetail(res.data);
+            })
+            .catch((rej)=>alert("Enter valid city name !!"))
+        }
+    })
+
+
   return (
     <>
-      <form class="mt-10 max-w-md mx-auto">
+      <form class="mt-10 max-w-md mx-auto" onSubmit={formik.handleSubmit}>
         <label
           for="default-search"
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -30,7 +50,11 @@ const WeatherCard = () => {
           </div>
           <input
             type="search"
-            id="default-search"
+            id="city"
+            name="city"
+            value={formik.city}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search City"
             required
@@ -43,9 +67,7 @@ const WeatherCard = () => {
           </button>
         </div>
       </form>
-
-
-        <Citydetail/>
+        {JSON.stringify(detail)===JSON.stringify({})? null:<Citydetail citydetail={detail}/>}
     </>
   );
 };
