@@ -12,7 +12,7 @@ const Citydetail = (props) => {
           <div class="font-bold text-xl">{props.citydetail.name}</div>
           <div class="text-sm text-gray-500"> {date.getDate()}-{date.getMonth()}-{date.getFullYear()}</div>
           <div class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
-            <img src= {`./img/${details.citydetail.weather[0].main}.png`} alt="" class="p-1" />
+            <img src= {`/img/${details.citydetail.weather[0].main}.png`} alt="" class="p-1" />
           </div>
           <div class="flex flex-row items-center justify-center mt-6">
             <div class="font-medium text-6xl">{temprature}°</div>

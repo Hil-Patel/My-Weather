@@ -78,3 +78,37 @@ nav{
 .Thunderstorm>div{
     color: rgb(190, 190, 190);
 }
+
+@media only screen and (max-width: 600px) {
+    
+
+    .title {
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .title > img {
+        width: 60px;
+    }
+
+    .title > h1 {
+        font-size: 25px;
+    }
+
+    .butn {
+        flex-direction: column;
+        gap: 0.1rem;
+        width: 8rem;
+    }
+
+    .default {
+        width: auto;
+        padding: 0.3rem 0.7rem;
+        border-radius: 15px;
+    }
+
+    .log-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
