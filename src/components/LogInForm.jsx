@@ -12,8 +12,7 @@ export default function LogInForm(props) {
     if ( values.password=== decryptedPassword) {
       navigate("/home");
     } else {
-      console.log(JSON.parse(localStorage.getItem(values.email)).password)
-      console.log(decryptedPassword);
+      alert("something went wrong !!!")
     }
   };
 
