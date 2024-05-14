@@ -4,7 +4,6 @@ const Citydetail = (props) => {
     const details=props;
     const temprature=Math.round(details.citydetail.main.temp-273);
     const date=new Date();
-    console.log(props)
   return (
     <div>
       <div class=" flex mt-20 justify-center ">
