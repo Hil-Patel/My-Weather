@@ -9,12 +9,18 @@ import { useState } from "react";
 export default function LogInForm(props) {
   const navigate = useNavigate();
   const checkingDetails = (values) => {
-    const decryptedPassword= CryptoJS.AES.decrypt(JSON.parse(localStorage.getItem(values.email)).password,"secret!3#%@").toString(CryptoJS.enc.Utf8);
-    if ( values.password=== decryptedPassword) {
-      navigate("/home");
-    } else {
+    try{
+      const decryptedPassword= CryptoJS.AES.decrypt(JSON.parse(localStorage.getItem(values.email)).password,"secret!3#%@").toString(CryptoJS.enc.Utf8);
+      if ( values.password=== decryptedPassword) {
+        navigate("/home");
+      } else {
+        alert("something went wrong");
+      }
+    }
+    catch(e){
       alert("something went wrong");
     }
+    
   };
 
   const formik = useFormik({
