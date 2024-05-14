@@ -13,7 +13,7 @@ export default function LogInForm(props) {
     if ( values.password=== decryptedPassword) {
       navigate("/home");
     } else {
-      navigate("/signUp")
+      alert("something went wrong");
     }
   };
 
